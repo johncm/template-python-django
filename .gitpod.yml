@@ -4,7 +4,7 @@ tasks:
   - name: Upgrade pip and outdated packages 
     init: |
       python -m pip install --upgrade pip
-      pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U 
+      # pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U 
       python -m pip install --user -q Django 
     command: |
       python manage.py migrate
